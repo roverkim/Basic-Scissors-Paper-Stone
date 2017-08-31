@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Rock Paper Scissors Part 2
+  </title>
+</head>
+
+<body>
+
+  <div id="game">
+
+  </div>
+
+  <script type="text/javascript">
+  // Display a Message
+
+  alert("Welcome to Rock Paper Scissors. Press r, p or s")
+
+  // Creates an array that lists out all of the options (Rock, Paper, or Scissors).
+  function repeat(){
+    var computerChoices = ["r", "p", "s"];
+
+    // This function is run whenever the user presses a key.
+    var userGuess = prompt();
+    // document.onkeyup = function(event) {
+    // Determines which key was pressed.
+
+    // Randomly chooses a choice from the options array. This is the Computer's guess.
+    var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+
+    // Alerts the key the user pressed (userGuess).
+    alert("User guess: " + userGuess);
+
+    // Alerts the Computer's guess.
+    alert("Computer guess: " + computerGuess);
+
+    if (userGuess == "r" && computerGuess == "s") {
+      alert("You Win");
+    }
+    else if (userGuess == "p" && computerGuess == "r") {
+            alert("You Win");
+    }
+    else if (userGuess == "s" && computerGuess == "p") {
+      alert("You Win");
+    }
+    else if (userGuess === computerGuess) {
+      alert("Tie");
+    }
+    else {
+      alert("You Lose")
+    }
+  }
+
+
+
+  repeat();
+  var Confirm = confirm("Do you want to continue?");
+
+  if (Confirm){
+    while (Confirm){
+      repeat();
+    }
+  }
+  else{
+    alert("Good Bye");
+  }
+
+
+  // };
+  </script>
+
+</body>
+
+</html>
